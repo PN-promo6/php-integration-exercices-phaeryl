@@ -25,27 +25,24 @@
                                 <span class="input-group-text"> <i class="fas fa-search"></i> </span>
                             </div>
                         </div>
-                        <ul class="list-group mb-3">
-                            <li class="list-group-item">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">It's a dummy todo item</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                            <li class="list-group-item done">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">This task is complete</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="far fa-square done-icon"></i>
-                                <i class="far fa-check-square done-icon"></i>
-                                <span class="todo-text">Here is another item</span>
-                                <i class="far fa-trash-alt"></i>
-                            </li>
-                        </ul>
-                        <button id="clearBtn" type="button" class="btn btn-dark btn-sm">Clear All</button>
+                        <?php
+                        $tasks = array("foo", "bar", "baz", "toto");
+                        foreach ($tasks as $task) {
+
+                        ?>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item">
+                                    <i class="far fa-square done-icon"></i>
+                                    <i class="far fa-check-square done-icon"></i>
+                                    <span class="todo-text"><?php echo $task ?></span>
+                                    <i class="far fa-trash-alt"></i>
+                                </li>
+                            <?php
+                        }
+                            ?>
+
+                            </ul>
+                            <button id="clearBtn" type="button" class="btn btn-dark btn-sm">Clear All</button>
                     </div>
                     <div class="card-footer">
                         <form id="form">
@@ -63,6 +60,7 @@
         </div>
     </div>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>
